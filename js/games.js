@@ -9,6 +9,7 @@ let jokeUrlNSFW = 'https://sv443.net/jokeapi/category/Miscellaneous';
 function fetchJoke(url, callback) {
     // Make XMLHttpRequest
     let xhr = new XMLHttpRequest();
+     xhr.setRequestHeader('Origin', '')
     xhr.open('GET', url);
     xhr.onreadystatechange = function () {
       if (xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
